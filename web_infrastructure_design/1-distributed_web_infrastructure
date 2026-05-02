@@ -1,1 +1,27 @@
+                    User
+                     |
+                     |
+                HAProxy (Load Balancer)
+                     |
+          -------------------------
+          |                       |
+      Server 1               Server 2
+   ----------------       ----------------
+   Nginx                  Nginx
+   App Server             App Server
+   Code Base              Code Base
+          \                       /
+           \                     /
+            ------ MySQL DB ------
+                 (Primary)
+                 (Replica)
+1. Load Balancer (HAProxy)
+
+HAProxy distributes incoming traffic between the two servers.
+
+It improves availability
+It balances load across servers
+It prevents overload on a single server
+
+
 
