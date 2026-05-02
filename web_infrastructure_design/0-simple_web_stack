@@ -1,1 +1,16 @@
+What is a server? A server is a physical or virtual computer that provides resources, data, or services to other computers (clients) over a network.
 
+What is the role of the domain name? It provides a human-readable name (like foobar.com) so users don't have to remember complex IP addresses.
+
+What type of DNS record is www? It is typically an A record (pointing to an IP) or a CNAME record (pointing to another domain). In this requirement, since it points to 8.8.8.8, it is an A record.
+
+What is the role of the web server (Nginx)? It handles incoming HTTP requests, serves static files (HTML/CSS), and directs traffic to the application server.
+
+What is the role of the application server? It executes the logic of the website (e.g., Python, PHP, or Javascript code) and processes data.
+
+What is the role of the database (MySQL)? It stores and manages the persistent data of the application (e.g., user profiles, posts).
+
+What is the server using to communicate with the user? It uses the HTTP/HTTPS protocols over TCP/IP.
+SPOF , we have  only 1 server.If our server accidently crashes or the hardware fails ,the entire website goes down.
+Downtime when maintenance needed:If you need to restart the server or update the code, the website will be offline during that time.
+Scalability issues: Since there is only one server, it cannot handle too much traffic. You cannot simply "add more power" forever; eventually, you need more servers (Horizontal Scaling). 
